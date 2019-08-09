@@ -1,14 +1,14 @@
 <template>
   <div class="md-example-child md-example-child-textarea md-example-child-textarea-0">
     <md-field>
-      <md-textarea
+      <md-textarea-item
         ref="demo0"
         title="普通"
         class="example"
         v-model="value"
         placeholder="普通文本域"
       />
-      <md-textarea
+      <md-textarea-item
         ref="demo0"
         title="自动适应"
         class="example"
@@ -18,7 +18,7 @@
         placeholder="最大高度200px 超过出现滚动条"
         :max-height="200"
       />
-      <md-textarea
+      <md-textarea-item
         ref="demo0"
         title="禁用"
         class="example"
@@ -28,7 +28,7 @@
         :max-height="100"
         disabled
       />
-      <md-textarea
+      <md-textarea-item
         ref="demo0"
         title="只读"
         class="example"
@@ -42,7 +42,7 @@
   </div>
 </template>
 
-<script>import {Textarea, Field} from 'mand-mobile'
+<script>import {TextareaItem, Field} from 'mand-mobile'
 
 export default {
   name: 'tips-demo',
@@ -54,7 +54,7 @@ export default {
     }
   },
   components: {
-    [Textarea.name]: Textarea,
+    [TextareaItem.name]: TextareaItem,
     [Field.name]: Field,
   },
 }

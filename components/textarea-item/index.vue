@@ -34,7 +34,7 @@
 <script>import FieldItem from '../field-item'
 
 export default {
-  name: 'md-textarea',
+  name: 'md-textarea-item',
   components: {
     [FieldItem.name]: FieldItem,
   },

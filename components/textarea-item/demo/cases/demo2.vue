@@ -1,7 +1,7 @@
 <template>
   <div class="md-example-child md-example-child-textarea md-example-child-textarea-2">
     <md-field>
-      <md-textarea
+      <md-textarea-item
         ref="demo2"
         title="字数统计"
         class="demo2"
@@ -26,12 +26,12 @@
             >
           </p>
         </template>
-      </md-textarea>
+      </md-textarea-item>
     </md-field>
   </div>
 </template>
 
-<script>import {Textarea, Field} from 'mand-mobile'
+<script>import {TextareaItem, Field} from 'mand-mobile'
 
 export default {
   name: 'tips-demo',
@@ -43,7 +43,7 @@ export default {
     }
   },
   components: {
-    [Textarea.name]: Textarea,
+    [TextareaItem.name]: TextareaItem,
     [Field.name]: Field,
   },
 }

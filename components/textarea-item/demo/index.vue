@@ -1,5 +1,5 @@
 <template>
-  <div class="md-example textarea">
+  <div class="md-example textarea-item">
     <section class="md-example-section" v-for="(demo, index) in demos" :key="index">
       <div class="md-example-title" v-html="demo.title || '基础'"></div>
       <div class="md-example-describe" v-html="demo.describe"></div>
@@ -15,7 +15,7 @@ import Demo0 from './cases/demo0'
 import Demo1 from './cases/demo1'
 import Demo2 from './cases/demo2'
 
-export default {...createDemoModule('textarea', [Demo0, Demo1, Demo2])}
+export default {...createDemoModule('textarea-item', [Demo0, Demo1, Demo2])}
 </script>
 
 <style lang="stylus">

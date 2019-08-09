@@ -1,9 +1,9 @@
 ### Import
 
 ```javascript
-import { Textarea } from 'mand-mobile'
+import { TextareaItem } from 'mand-mobile'
 
-Vue.component(Textarea.name, Textarea)
+Vue.component(TextareaItem.name, TextareaItem)
 ```
 
 ### Code Examples
@@ -11,28 +11,28 @@ Vue.component(Textarea.name, Textarea)
 
 ### API
 
-#### Textarea Props
+#### TextareaItem Props
 | Props       | Description                                      | Type          | Default | Note               |
 | ----------- | ------------------------------------------------ | ------------- | ------- | ------------------ |
 | title       | title of textarea                                | String        | -       | -                  |
 | placeholder | placeholder of textarea                          | String        | -       | -                  |
 | v-model     | value of textarea                                | String        | -       |                    |
-| maxLength   | max length of textarea                           | String/Number | -       | -                  |
+| max-length  | max length of textarea                           | String/Number | -       | -                  |
 | autosize    | Dose the Textarea  resize with content           | Boolean       | `false` | -                  |
-| maxHeight   | The max height of textarea with `autosize=true`, | String/Number | `'40'`  | rely on `autosize` |
+| max-height  | The max height of textarea with `autosize=true`, | String/Number | `'40'`  | rely on `autosize` |
 | solid       | the width of title is fixed or not               | Boolean       | `true`  |                    |
 | readonly    | readonly                                         | Boolean       | `false` | -                  |
 | disabled    | disabled                                         | Boolean       | `false` | -                  |
 | rows        | rows                                             | String/Number | `'3'`   | -                  |
 | error       | error message                                    | String        | -       | -                  |
 
-#### Textarea Slots
+#### TextareaItem Slots
 
 ##### footer
 
 the slot of footer
 
-#### Textarea Events
+#### TextareaItem Events
 
 ##### focus()
 Input gets focus
