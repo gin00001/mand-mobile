@@ -119,7 +119,6 @@ export default {
     $_onInput(event) {
       this.$data.inputValue = event.target.value
 
-      // 计算高度
       this.$nextTick(() => {
         this.resizeTextarea()
       })
@@ -139,42 +138,18 @@ export default {
       }, 100)
     },
     $_calcTextareaHeight(textarea) {
-      /**
-       * 思路1 查看是否有滚动条, 获取scrollHeight
-       * 注意: 如果元素被隐藏, scrollHeight是0, textarea不能被展开
-       */
+      // Triggers the textarea to repaint
       textarea.style.height = 'auto'
+
       let scrollHeight = textarea.scrollHeight
-      // 出现滚动条
       if (scrollHeight > this.$data.maxHeightInner) {
         scrollHeight = this.$data.maxHeightInner
         this.$emit('hasScroll', true)
       } else {
-        // 未出现滚动条
         this.$emit('hasScroll', false)
       }
 
-      /**
-       * 为啥这里需要直接操作dom:
-       * 这里需要通过textarea.style.height='auto' 出发textarea的重绘, 使scrollHeight在高度缩小时也能正确计算
-       */
       textarea.style.height = scrollHeight + 'px'
-
-      /**
-       * 思路2 嵌入pre 标签, 得到pre标签的高度
-       */
-
-      /**
-       * 思路3 计算字符串的长度, 除以 cols 得到rows
-       * 这个的问题是 rows计算不精确, 数字和中文有误差
-       */
-
-      // const cols = textarea.cols;
-      // let linecount = 0;
-      // this.inputValue.split('\n').map(l => {
-      //   linecount += 1 + Math.floor(l.length / cols)
-      // })
-      // this.rowsInner = linecount
     },
     // public
     resizeTextarea() {
